@@ -1,0 +1,10 @@
+.half-split {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.half-split-el {
+    width: 50%;
+}
