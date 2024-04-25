@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "Omnes Pro Bold";
+    src: url("Omnes_Pro_Bold.otf") format("opentype");
+}
+
+h1 {
+    font-family: "Omnes Pro Bold";
+}
+
 .half-split {
     display: flex;
     flex-wrap: wrap;
@@ -7,4 +16,5 @@
 
 .half-split-el {
     width: 50%;
+    justify-items: center;
 }
