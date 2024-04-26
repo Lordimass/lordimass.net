@@ -1,10 +1,16 @@
+/****************  LOCAL FONT FACES  ****************/
 @font-face {
     font-family: "Omnes Pro Bold";
     src: url("Omnes_Pro_Bold.otf") format("opentype");
 }
 
+/****************  STYLE TAGS  ****************/
 h1 {
     font-family: "Omnes Pro Bold";
+}
+
+p {
+    font-family: "Courier Prime";
 }
 
 .half-split {
