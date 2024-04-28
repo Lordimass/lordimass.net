@@ -1,7 +1,7 @@
 /****************  LOCAL FONT FACES  ****************/
 @font-face {
     font-family: "Omnes Pro Bold";
-    src: url("Omnes_Pro_Bold.otf") format("opentype");
+    src: url("../fonts/Omnes_Pro_Bold.otf") format("opentype");
 }
 
 /****************  STYLE TAGS  ****************/
@@ -13,6 +13,7 @@ p {
     font-family: "Courier Prime";
 }
 
+/****************  Classes  ****************/
 .half-split {
     display: flex;
     flex-wrap: wrap;
@@ -24,3 +25,10 @@ p {
     width: 50%;
     justify-items: center;
 }
+
+#footer-gifs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }

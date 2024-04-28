@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+  }
+
+#sticker {
+    display: flex;
+    width: 25%;
+    float: left;
+}
+
+#main-info {
+    width: 65%;
+    background-color:white;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius:1rem;
+    float: left;
+}
+
+#portals {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.portal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    border-radius: 1rem;
+    background-color: aqua;
+    height:50rem;
+    margin:1rem
+}
+
+.portal-icon {
+    aspect-ratio: 1 / 1;
+    align-self: start;
+    width:90%;
+    border-radius: 50%;
+    background-color: white;
+    margin:1rem
+}
+
+/* Used when the screen width is less than the given value (e.g. mobile devices) */
+@media screen and (max-width: 800px) {
+    #main-info {
+        width: 100%
+    }
+    #sticker {
+        width: 50%;
+        align-self: center;
+    }
+}
