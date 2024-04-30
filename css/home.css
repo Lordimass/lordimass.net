@@ -31,12 +31,13 @@
 
 .portal {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 30%;
     border-radius: 1rem;
     background-color: aqua;
-    height:50rem;
+    height:40vw;
     margin:1rem;
     transition: transform 0.2s ease-in-out;
 }
@@ -44,16 +45,26 @@
 .portal-icon {
     aspect-ratio: 1 / 1;
     align-self: start;
-    width:90%;
+    width:80%;
     border-radius: 50%;
     background-color: white;
-    margin:1rem;
+    margin:3rem;
     align-content: center;
     justify-content: center;
+    transition: transform 0.2s ease-in-out;
 }
 
 .portal:hover {
     transform: scale(1.02);
+}
+
+.portal-icon:hover {
+    transform: scale(1.05);
+}
+
+.portal-head {
+    font-size: 4vw;
+    margin: 1rem
 }
 
 #code-icon-container {
