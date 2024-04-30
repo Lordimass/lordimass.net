@@ -6,6 +6,11 @@
     display: flex;
     width: 25%;
     float: left;
+    transition: transform 1s ease-in-out;
+}
+
+.sticker-rotate {
+    transform: rotateY(360deg);
 }
 
 #main-info {
@@ -32,7 +37,8 @@
     border-radius: 1rem;
     background-color: aqua;
     height:50rem;
-    margin:1rem
+    margin:1rem;
+    transition: transform 0.2s ease-in-out;
 }
 
 .portal-icon {
@@ -41,7 +47,20 @@
     width:90%;
     border-radius: 50%;
     background-color: white;
-    margin:1rem
+    margin:1rem;
+    align-content: center;
+    justify-content: center;
+}
+
+.portal:hover {
+    transform: scale(1.02);
+}
+
+#code-icon-container {
+    text-align: center;
+    font-size: 10vw;
+    font-family: "Courier Prime Bold";
+    font-weight:900
 }
 
 /* Used when the screen width is less than the given value (e.g. mobile devices) */

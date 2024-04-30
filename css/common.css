@@ -13,6 +13,15 @@ p {
     font-family: "Courier Prime";
 }
 
+a[href] {
+    text-decoration: none;
+    color: blue;
+}
+
+a[href]:hover {
+    font-weight: 700;
+}
+
 /****************  Classes  ****************/
 .half-split {
     display: flex;
