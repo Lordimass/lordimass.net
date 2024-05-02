@@ -6,11 +6,16 @@
     display: flex;
     width: 25%;
     float: left;
-    transition: transform 1s ease-in-out;
 }
 
-.sticker-rotate {
-    transform: rotateY(360deg);
+
+/* Bundling together to allow for JS triggering of animations */
+.rotation {
+    animation: rotation 1s linear;
+}
+@keyframes rotation  {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
 }
 
 #main-info {
