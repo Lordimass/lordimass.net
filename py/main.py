@@ -6,12 +6,7 @@ import numpy
 import os
 import math
 import json
-from colorama import Back, Fore, Style
-import time
-
-def tprint(message: str): # Prints messages with a time stamp prefixing them
-    prfx = Back.BLACK + Fore.GREEN + time.strftime("%H:%M:%S UTC", time.gmtime()) + Back.RESET + Fore.WHITE + Style.BRIGHT
-    print(prfx + " " + str(message) + Style.RESET_ALL)
+from subroutines import *
 
 class Rect():
     def __init__(self, width, height=None, img_path:str=None, scale=1):
