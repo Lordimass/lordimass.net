@@ -6,6 +6,12 @@ import numpy
 import os
 import math
 import json
+from colorama import Back, Fore, Style
+import time
+
+def tprint(message: str): # Prints messages with a time stamp prefixing them
+    prfx = Back.BLACK + Fore.GREEN + time.strftime("%H:%M:%S UTC", time.gmtime()) + Back.RESET + Fore.WHITE + Style.BRIGHT
+    print(prfx + " " + str(message) + Style.RESET_ALL)
 
 class Rect():
     def __init__(self, width, height=None, img_path:str=None, scale=1):
@@ -49,7 +55,7 @@ class RectPacker():
             self.__drawable = PIL.ImageDraw.ImageDraw(self.__image)
         self.visualise = visualise # Allows visualisation to be disabled for performance
 
-    def pack(self): # Actual callable, main loop for packing.
+    def pack(self, save=True) -> dict: # Actual callable, main loop for packing.
         i = 0
         for rect in self.rects:
             self.__find_and_place(rect)
@@ -60,12 +66,16 @@ class RectPacker():
             self.__image.save("output.png")
 
         if self.__positions != {}: # If it handled images, save their positions to json
-            with open(f"positions.json", "w") as f:
-                json.dump(self.__positions, f, indent=4)
+            if save:
+                with open(f"positions.json", "w") as f:
+                    json.dump(self.__positions, f, indent=4)
+            return self.__positions
 
     def __load_rects_from_images(self, dir):
         img_paths = os.listdir(dir)
         imgs = []
+        tprint("Packing the following images:")
+        tprint(img_paths)
 
         # Calculating the highest resolution to scale all images to be the same resolution
         maxres = 0
@@ -77,12 +87,10 @@ class RectPacker():
             
         for img in imgs:
             res_sf = maxres/(img.width*img.height)
-            print(res_sf, img.width*img.height)
             dim = [
                 img.width*math.sqrt(res_sf),
                 img.height*math.sqrt(res_sf)
                 ] # Image dimensions, scaled according to maximum resolution image
-            print(dim[0]*dim[1])
             
             sf = 1
             while dim[0] > self.space[0]: # If the image is too large for the canvas, it will resize it.
@@ -112,7 +120,10 @@ class RectPacker():
         return self.__sort_by_area(greater) + [pivot] + self.__sort_by_area(lesser)
 
     def __place_rect(self, rect:Rect, pos:tuple):
-        print(f"placing {rect.dim} at {pos}")
+        if rect.img_path == None:
+            tprint(f"placing {rect.dim} at {pos}")
+        else:
+            tprint(f"placing {rect.img_path} at {pos}")
 
         # Calculating corner coords
         upleft = pos
@@ -162,8 +173,10 @@ class RectPacker():
                 
         # If it gets to this point, it must have failed to place it
         # Increase height and try again
-        
-        print(f"Failed to place {rect.dim}, increasing canvas height and retrying")
+        if rect.img_path == None:
+            tprint(f"Failed to place {rect.dim}, increasing canvas height and retrying")
+        else:
+            tprint(f"Failed to place {rect.img_path}, increasing canvas height and retrying")
 
         # Expanding occupation array
         additive = numpy.full(shape=(rect.height,self.space[0]), fill_value=False)
@@ -175,6 +188,6 @@ class RectPacker():
             newimage.paste(self.__image)
             self.__image = newimage
             self.__drawable = PIL.ImageDraw.ImageDraw(self.__image)
-            self.__find_and_place(rect)
+            
+        self.__find_and_place(rect)
 
-RectPacker(width=1920, dir = "../images/art").pack()
