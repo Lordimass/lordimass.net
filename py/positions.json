@@ -1,22 +1,117 @@
 {
+    "../images/art/boy.jpg": [
+        0,
+        0,
+        334.0
+    ],
+    "../images/art/chibi fizzarolli.jpg": [
+        330,
+        0,
+        319.0
+    ],
+    "../images/art/Demon Creature.jpg": [
+        640,
+        0,
+        301.0
+    ],
+    "../images/art/eyeball creature thing.jpg": [
+        940,
+        0,
+        303.0
+    ],
+    "../images/art/Fabric Practice Sketch.jpg": [
+        1240,
+        0,
+        312.0
+    ],
+    "../images/art/Frog..jpg": [
+        1550,
+        0,
+        359.0
+    ],
+    "../images/art/frogs.jpg": [
+        1550,
+        340,
+        303.0
+    ],
     "../images/art/George Monster.png": [
         0,
-        0
+        380,
+        350.0
+    ],
+    "../images/art/halloweeny doodles.jpg": [
+        350,
+        400,
+        348.0
+    ],
+    "../images/art/hollowknight demon boy.jpg": [
+        1240,
+        390,
+        303.0
+    ],
+    "../images/art/hooded creature 2.jpg": [
+        690,
+        400,
+        303.0
+    ],
+    "../images/art/hooded creature.jpg": [
+        0,
+        730,
+        303.0
+    ],
+    "../images/art/iadoros.jpg": [
+        1540,
+        740,
+        303.0
     ],
     "../images/art/Lordi Sticker.png": [
-        350,
-        0
+        300,
+        750,
+        346.0
+    ],
+    "../images/art/lurker.jpg": [
+        990,
+        790,
+        396.0
     ],
     "../images/art/Prolifice World Map.png": [
-        690,
-        0
+        300,
+        1100,
+        407.0
     ],
     "../images/art/Reformation Logo Mk.3 [DISCORD].png": [
-        690,
-        300
+        700,
+        1100,
+        350.0
+    ],
+    "../images/art/resting knight.jpg": [
+        1050,
+        1100,
+        346.0
+    ],
+    "../images/art/Robot.jpg": [
+        1390,
+        1140,
+        318.0
     ],
     "../images/art/Silly Guy.png": [
         0,
-        350
+        1400,
+        350.0
+    ],
+    "../images/art/starwars day 2023.jpg": [
+        1700,
+        1140,
+        303.0
+    ],
+    "../images/art/talon.jpg": [
+        350,
+        1400,
+        303.0
+    ],
+    "../images/art/Tentacle monster.jpg": [
+        650,
+        1450,
+        303.0
     ]
 }

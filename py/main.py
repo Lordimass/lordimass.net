@@ -29,6 +29,7 @@ class Rect():
 class RectPacker():
     def __init__(self, width, dir=None, rects=None, visualise = False):
         self.__sf = 1 # Everything must be scaled to this scale factor, then scaled back up to get real screen coordinates
+        self.width = width
         while width > 1000: # Forcing width to 3 figures to fight latency
             width //= 10
             self.__sf *= 10
@@ -69,8 +70,8 @@ class RectPacker():
     def __load_rects_from_images(self, dir):
         img_paths = os.listdir(dir)
         imgs = []
-        tprint("Packing the following images:")
-        tprint(img_paths)
+        #tprint("Packing the following images:")
+        #tprint(img_paths)
 
         # Calculating the highest resolution to scale all images to be the same resolution
         maxres = 0
@@ -92,9 +93,13 @@ class RectPacker():
                 dim[0] = math.floor(dim[0] / 10)
                 dim[1] = math.floor(dim[1] / 10)
                 sf *= 10
-            self.rects.append(
-                Rect(dim[0], dim[1], img_path=img.path, scale=sf)
-            )
+
+            rect = Rect(dim[0], dim[1], img_path=img.path, scale=sf)
+            rect.img_suggested_width = img.width*math.sqrt(res_sf)
+            while rect.img_suggested_width > self.width:
+                rect.img_suggested_width //= 10
+
+            self.rects.append(rect)
         
     def __sort_by_area(self, rectangles):
         # QUICK SORT ALGORITHM
@@ -116,9 +121,11 @@ class RectPacker():
 
     def __place_rect(self, rect:Rect, pos:tuple):
         if rect.img_path == None:
-            tprint(f"placing {rect.dim} at {pos}")
+            #tprint(f"placing {rect.dim} at {pos}")
+            pass
         else:
-            tprint(f"placing {rect.img_path} at {pos}")
+            #tprint(f"placing {rect.img_path} at {pos}")
+            pass
 
         # Calculating corner coords
         upleft = pos
@@ -136,7 +143,7 @@ class RectPacker():
 
         # Update positions dict if needed
         if rect.img_path != None:
-            self.__positions[str(rect.img_path)] = (pos[0]*self.__sf, pos[1]*self.__sf)
+            self.__positions[str(rect.img_path)] = (pos[0]*self.__sf, pos[1]*self.__sf, rect.img_suggested_width)
 
     def __find_and_place(self, rect:Rect):
         for y in range(len(self.__occupation)):
@@ -169,9 +176,11 @@ class RectPacker():
         # If it gets to this point, it must have failed to place it
         # Increase height and try again
         if rect.img_path == None:
-            tprint(f"Failed to place {rect.dim}, increasing canvas height and retrying")
+            #tprint(f"Failed to place {rect.dim}, increasing canvas height and retrying")
+            pass
         else:
-            tprint(f"Failed to place {rect.img_path}, increasing canvas height and retrying")
+            #tprint(f"Failed to place {rect.img_path}, increasing canvas height and retrying")
+            pass
 
         # Expanding occupation array
         additive = numpy.full(shape=(rect.height,self.space[0]), fill_value=False)
