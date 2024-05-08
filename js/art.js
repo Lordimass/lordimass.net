@@ -1,18 +1,19 @@
-const httpDirectory = "http://127.0.0.1:5000"
+const httpDirectory = "http://127.0.0.1:8080"
 var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 var last_refresh = new Date().getTime()
 
 resized_window = function() { // Reloads the images when the view width changes by enough
   current = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
   var percentDifference = Math.abs(vw - current)/vw
-  if (percentDifference <0 && (new Date().getTime() - last_refresh) > 5000) {
+  if (percentDifference<0 && (new Date().getTime() - last_refresh) > 5000) {
+    // WILL NOT AUTO RESIZE, DISABLED FUNCTION FOR NOW BECAUSE IT WONT WORK, CHANGE LINE ABOVE TO RE-ENABLE, E.G. percentDifference > 0.1
     vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
     last_refresh = new Date().getTime()
     place_images()
     console.log("Viewwidth change, refreshing")
   }
 
-// WILL NOT RESIZE, DISABLED FUNCTION FOR NOW BECAUSE IT WONT WORK, CHANGE LINE ABOVE TO RE-ENABLE, E.G. percentDifference > 0.1
+
 
 }
 window.addEventListener("resize", resized_window)
@@ -46,10 +47,11 @@ place_images = function() {
               key = key[key.length-1]
               const path = "images/art/" + key
 
-              //console.log(key + " => " + data);
+              console.log(key + " => " + data);
               const img = document.createElement("img");
               img.setAttribute("src", path);
               img.setAttribute("width", data[2]);
+              img.classList.add("image")
               img.style.position = "absolute";
               img.style.left = data[0] + "px";
               img.style.top = data[1] + "px";

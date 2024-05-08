@@ -1,117 +1,142 @@
 {
-    "../images/art/boy.jpg": [
+    "images/art/boi.png": [
         0,
         0,
-        334.0
+        553.0
     ],
-    "../images/art/chibi fizzarolli.jpg": [
-        330,
+    "images/art/boy.jpg": [
+        550,
         0,
-        319.0
+        563.0
     ],
-    "../images/art/Demon Creature.jpg": [
-        640,
+    "images/art/chibi fizzarolli.jpg": [
+        1110,
         0,
-        301.0
+        537.0
     ],
-    "../images/art/eyeball creature thing.jpg": [
-        940,
+    "images/art/Demon Creature.jpg": [
+        550,
+        610,
+        507.0
+    ],
+    "images/art/eyeball creature thing.jpg": [
         0,
-        303.0
+        620,
+        510.0
     ],
-    "../images/art/Fabric Practice Sketch.jpg": [
-        1240,
-        0,
-        312.0
-    ],
-    "../images/art/Frog..jpg": [
-        1550,
-        0,
-        359.0
-    ],
-    "../images/art/frogs.jpg": [
-        1550,
-        340,
-        303.0
-    ],
-    "../images/art/George Monster.png": [
-        0,
-        380,
-        350.0
-    ],
-    "../images/art/halloweeny doodles.jpg": [
-        350,
-        400,
-        348.0
-    ],
-    "../images/art/hollowknight demon boy.jpg": [
-        1240,
-        390,
-        303.0
-    ],
-    "../images/art/hooded creature 2.jpg": [
-        690,
-        400,
-        303.0
-    ],
-    "../images/art/hooded creature.jpg": [
-        0,
-        730,
-        303.0
-    ],
-    "../images/art/iadoros.jpg": [
-        1540,
-        740,
-        303.0
-    ],
-    "../images/art/Lordi Sticker.png": [
-        300,
-        750,
-        346.0
-    ],
-    "../images/art/lurker.jpg": [
-        990,
-        790,
-        396.0
-    ],
-    "../images/art/Prolifice World Map.png": [
-        300,
-        1100,
-        407.0
-    ],
-    "../images/art/Reformation Logo Mk.3 [DISCORD].png": [
-        700,
-        1100,
-        350.0
-    ],
-    "../images/art/resting knight.jpg": [
+    "images/art/Fabric Practice Sketch.jpg": [
         1050,
-        1100,
-        346.0
+        640,
+        525.0
     ],
-    "../images/art/Robot.jpg": [
-        1390,
-        1140,
-        318.0
+    "images/art/Finemine Commission.png": [
+        510,
+        1290,
+        437.0
     ],
-    "../images/art/Silly Guy.png": [
+    "images/art/Frog..jpg": [
+        940,
+        1300,
+        605.0
+    ],
+    "images/art/frogs.jpg": [
         0,
-        1400,
-        350.0
+        1300,
+        510.0
     ],
-    "../images/art/starwars day 2023.jpg": [
-        1700,
-        1140,
-        303.0
+    "images/art/George Monster.png": [
+        940,
+        1870,
+        589.0
     ],
-    "../images/art/talon.jpg": [
-        350,
-        1400,
-        303.0
+    "images/art/halloweeny doodles.jpg": [
+        0,
+        2080,
+        585.0
     ],
-    "../images/art/Tentacle monster.jpg": [
-        650,
-        1450,
-        303.0
+    "images/art/hollowknight demon boy.jpg": [
+        580,
+        2460,
+        510.0
+    ],
+    "images/art/hooded creature 2.jpg": [
+        1090,
+        2460,
+        510.0
+    ],
+    "images/art/hooded creature.jpg": [
+        0,
+        2670,
+        510.0
+    ],
+    "images/art/iadoros.jpg": [
+        510,
+        3140,
+        510.0
+    ],
+    "images/art/IS THAT A HECKIN JOJO REFERENCE.png": [
+        1020,
+        3140,
+        549.0
+    ],
+    "images/art/Konrad.png": [
+        0,
+        3350,
+        496.0
+    ],
+    "images/art/Lordi Sticker.png": [
+        1020,
+        3770,
+        582.0
+    ],
+    "images/art/lurker.jpg": [
+        0,
+        4050,
+        667.0
+    ],
+    "images/art/Prolifice World Map.png": [
+        660,
+        4360,
+        685.0
+    ],
+    "images/art/Reformation Logo Mk.3 [DISCORD].png": [
+        0,
+        4570,
+        589.0
+    ],
+    "images/art/resting knight.jpg": [
+        580,
+        4860,
+        583.0
+    ],
+    "images/art/Robot.jpg": [
+        1160,
+        4860,
+        535.0
+    ],
+    "images/art/Silly Guy.png": [
+        0,
+        5150,
+        589.0
+    ],
+    "images/art/Snow Leopard.png": [
+        580,
+        5510,
+        612.0
+    ],
+    "images/art/starwars day 2023.jpg": [
+        1190,
+        5510,
+        511.0
+    ],
+    "images/art/talon.jpg": [
+        0,
+        5730,
+        510.0
+    ],
+    "images/art/Tentacle monster.jpg": [
+        510,
+        6070,
+        510.0
     ]
 }
