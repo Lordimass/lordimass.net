@@ -6,3 +6,9 @@
     transform: scale(1.5);
     z-index: 1;
 }
+
+#image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    grid-gap: 10px
+}
