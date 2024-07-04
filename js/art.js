@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 const httpDirectory = "http://localhost:8080"
 const artDirectory = "images/art"
 
@@ -35,3 +36,17 @@ place_images = function() {
         });
 }
 place_images()
+=======
+fetch("http://192.168.1.97:8000/images/art/", {Headers: {"Access-Control-Allow-Private-Network": true}})
+.then((res) => {
+  if (!res.ok) {
+      throw new Error
+          (`HTTP error! Status: ${res.status}`);
+  }
+  return res;
+})
+.then((data) => 
+    console.log(data))
+.catch((error) => 
+     console.error("Unable to fetch data:", error));
+>>>>>>> Stashed changes
