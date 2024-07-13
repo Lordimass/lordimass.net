@@ -1,7 +1,7 @@
 const footerContainer = document.getElementById('footer');
 
 loadFooter = function() {
-    fetch('data://./footer.html')
+    fetch('./footer.html')
     .then(data => {
         footerContainer.innerHTML = data;
     })
