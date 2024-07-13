@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 const httpDirectory = "http://localhost:8080"
 const artDirectory = "images/art"
 
@@ -21,32 +20,31 @@ place_images = function() {
               console.log(path);
               const img = document.createElement("img");
               img.setAttribute("src", path);
-              img.setAttribute("width", "100%");
-              img.setAttribute("")
-              img.classList.add("image")
+              img.setAttribute("width", "20%");
+              img.classList.add("item")
               // <img src="images/art/Lordi Sticker.png" width="500" style="position: relative; transform:translate(50px, 50px)">
 
               const container = document.getElementById("image-container")
               container.appendChild(img)
           };
+
+          /* Use masonry to position the images */
+          var grid = document.querySelector('.grid');
+          var msnry = new Masonry(grid);
+
+          const imagecontainer = window.getElementById("image-container")
+          const currentsize = imagecontainer.getAttribute(width)
+          imagecontainer.setAttribute("width", "20%")
+          imagecontainer.setAttribute("width", currentsize)
         })
 
       .catch(error => {
           console.error('Error:', error);
         });
 }
-place_images()
-=======
-fetch("http://192.168.1.97:8000/images/art/", {Headers: {"Access-Control-Allow-Private-Network": true}})
-.then((res) => {
-  if (!res.ok) {
-      throw new Error
-          (`HTTP error! Status: ${res.status}`);
-  }
-  return res;
-})
-.then((data) => 
-    console.log(data))
-.catch((error) => 
-     console.error("Unable to fetch data:", error));
->>>>>>> Stashed changes
+
+
+window.onload = () => {
+  place_images()
+}
+

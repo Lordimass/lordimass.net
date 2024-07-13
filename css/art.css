@@ -1,14 +1,32 @@
-.image {
+/*
+.item {
     transition: transform 0.2s ease-in-out;
 }
 
-.image:hover {
-    transform: scale(1.5);
+.item:hover {
+    transform: scale(1.1);
     z-index: 1;
 }
 
 #image-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    grid-template-columns: auto auto auto auto auto;
     grid-gap: 10px
 }
+
+*/
+
+.grid {
+    /* Remove default browser styles */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .grid .item {
+    float: left; /* Masonry uses float for positioning */
+  }
+  
+  /* Optional: Add some margin/padding between elements */
+  .grid .item {
+    margin: 0px;
+  }
