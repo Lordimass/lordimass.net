@@ -1,0 +1,68 @@
+#nav-box {
+    display:flex;
+    width:50%;
+    height:100%;
+    justify-content: right;
+    color:white;
+    font-family: "Omnes Medium";
+    flex-wrap: wrap;
+}
+
+.nav {
+    width:10vw;
+    height:100%;
+    font-size: 3.4vh;
+}
+
+#logo-text {
+    display:flex;
+    margin-left:1rem; 
+    margin-right:auto; 
+    width:70%;
+    height: 100%;
+    align-items: center;
+
+    font-family: "Omnes Pro Bold";
+    font-size:3.4vh;
+}
+
+body {
+    background-image: url("Collage.jpg");
+    background-size: cover;
+}
+
+#header {
+    width: 100%;
+    height: 7vh;
+    background: #000;
+    margin: 0;
+}
+
+#title {
+    display: flex;
+    width: 50vw;
+    background: #000;
+    margin: auto auto;
+    border-bottom-left-radius: 5vw;
+    border-bottom-right-radius: 5vw;
+}
+
+#title-text {
+    color:white;
+    margin: auto auto;
+    text-align: center;
+    font-size: 3vw;
+}
+
+@media screen and (max-width: 1100px) {
+    #logo-text {
+        font-size: 0px;
+    }
+    .nav {
+        font-size: 0px;
+    }
+
+    #title {
+        width:60vw
+    }
+}

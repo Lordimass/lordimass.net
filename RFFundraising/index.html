@@ -2,57 +2,23 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../css/common.css">
+        <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="index.css">
     </head>
 
     <body style="margin:0">
         <div id="header" style="align-content: center;">
-        <div id="header-content", style="height:80%;">
+        <div id="header-content", style="height:80%; display:flex;">
             <div id="logo" style="display:flex; height:100%; width:50%; flex-wrap: wrap;">
                 <div id="logo-icon" style="display:flex; height:100%"><a href=""><img src="logosmol.png" style="height:100%; margin:auto"></a></div>
-                <div id="logo-text" style="margin:0; width:70%"><h1 id="logo-text-h1"><a href="" style="color:white">Reformation Fundraising</a></h1></div>
+                <div id="logo-text"><a href="" style="color:white;">Reformation Fundraising</a></div>
             </div>
             <div id="nav-box">
-                <div id="archive"></div>
-                <div id="members"></div>
+                <div class="nav" id="archive">Archive</div>
+                <div class="nav" id="members">Members</div>
             </div>
         </div>
         </div>
         <div id="title"><div id="title-text"><h1 style="padding: 10px;">REFORMATION FUNDRAISING</h1></div></div>
     </body>
 
-    <style>
-        body {
-            background-image: url("Collage.jpg");
-            background-size: cover;
-        }
-
-        #header {
-            width: 100%;
-            height: 5rem;
-            background: #000;
-            margin: 0;
-        }
-
-        #title {
-            display: flex;
-            width: 50%;
-            background: #000;
-            margin: auto auto;
-            border-bottom-left-radius: 5vw;
-            border-bottom-right-radius: 5vw;
-        }
-
-        #title-text {
-            color:white;
-            margin: auto auto;
-            text-align: center;
-            font-size: 3vw;
-        }
-
-        @media screen and (max-width: 1100px) {
-            #logo-text-h1 {
-                font-size: 0px;
-            }
-        }
-    </style>
 </html>
