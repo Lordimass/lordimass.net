@@ -56,20 +56,3 @@ body {
     text-align: center;
     font-size: 3vw;
 }
-
-@media screen and (max-width: 1100px) { /* Mobile Only */
-    #logo-text {
-        display: none;
-    }
-    .nav {
-        display: none;
-    }
-
-    #title {
-        width:60vw
-    }
-}
-
-@media screen and (min-width: 1100px) { /* Desktop Only */
-
-}
