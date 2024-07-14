@@ -42,7 +42,7 @@ const gifs = [
     }
 ]
 
-const footerContainer = document.getElementById('footer');
+const footerContainer = document.getElementById("footer");
 const footerGifs = document.createElement("div");
 footerGifs.setAttribute("id", "footer-gifs");
 footerContainer.appendChild(footerGifs);
