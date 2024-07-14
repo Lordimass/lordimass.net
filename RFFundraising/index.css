@@ -1,3 +1,52 @@
+#stream2020, #stream2021, #stream2022, #stream2023, #stream2024 {
+    background-size:100%;
+    color: white;
+    font-family: "Omnes Pro Bold";
+    transition: font-size 0.2s ease-in-out
+}
+
+#stream2020:hover, #stream2021:hover, #stream2022:hover, #stream2023:hover, #stream2024:hover {
+    font-size: 3vh;
+}
+
+#stream2020 {
+    background-image: url(images/2020theme.jpeg);
+    background-position-y: 60%;
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+}
+
+#stream2021 {background-image: url(images/2021theme.jpeg)}
+#stream2022 {background-image: url(images/2022theme.gif); background-position-y: 100%;}
+#stream2023 {background-image: url(images/2023theme.jpeg)}
+#stream2024 {
+    background-position-y: 60%;
+    background-image: url(images/2024theme.jpeg);
+    border-bottom-left-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+    color:black;
+}
+
+.dropdown-content { /* Dropdown content (Hidden by default) */
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0);
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 0.5vw;
+}
+
+.dropdown-content a { /* Links inside the dropdown */
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 2.5vh;
+}
+
+#archive:hover {font-weight: 700}
+#archive:hover .dropdown-content {display: block}
+
 #nav-box {
     display:flex;
     width:50%;
@@ -27,7 +76,7 @@
 }
 
 body {
-    background-image: url("Collage.jpg");
+    background-image: url("images/Collage.jpg");
     background-size: cover;
 }
 
@@ -45,7 +94,24 @@ body {
     margin: auto auto;
     border-bottom-left-radius: 5vw;
     border-bottom-right-radius: 5vw;
+
+    /* Initial off screen position */
+    transform: translateY(-100%);
+
+    /* Animation Properties */
+    animation: fly-in 1s ease-in-out;
+    animation-fill-mode: forwards;
+    z-index: -1;
+
 }
+
+@keyframes fly-in {
+    0% {
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
 #title-text {
     color:white;
