@@ -129,6 +129,11 @@
         width: 10%
     }
 
+    .nav {
+        width: 30%;
+        font-size: 2.6vh;
+    }
+
     #title {
         width:60vw
     }

@@ -9,9 +9,13 @@
     src: url("../fonts/Omnes\ Medium.ttf") format("opentype");
 }
 
+@font-face {
+    font-family: "Omnes Black";
+    src: url("../fonts/Omnes\ Black.ttf") format("opentype");
+}
 /****************  STYLE TAGS  ****************/
 h1 {
-    font-family: "Omnes Pro Bold";
+    font-family: "Omnes Black";
 }
 
 p {
