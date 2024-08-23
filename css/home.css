@@ -37,7 +37,7 @@
     grid-template-columns: repeat(5, 1fr); 
     grid-template-rows: 1fr;
     justify-items: center;
-    width: 75%;
+    width: 50%;
 
     margin: 1vw;
     margin-left: auto;
@@ -51,13 +51,18 @@
     aspect-ratio: 1/1;
 
     background-color: #bfd3ee;
-    border-radius: 5vw;
+    border-radius: 20%;
     align-items: center;
 }
 
 .soc img {
     width: 60%;
     margin: auto auto;
+    transition: all 0.2s;
+}
+
+.soc:hover img {
+    width: 70%;
 }
 
 /* Used when the screen width is less than the given value (e.g. mobile devices) */
