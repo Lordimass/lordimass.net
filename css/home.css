@@ -1,13 +1,8 @@
-* {
-    box-sizing: border-box;
-  }
-
 #sticker {
     display: flex;
     width: 25%;
     float: left;
 }
-
 
 /* Bundling together to allow for JS triggering of animations */
 .rotation {
@@ -18,6 +13,7 @@
     to {transform: rotate(360deg);}
 }
 
+
 #main-info {
     width: 65%;
     background-color:white;
@@ -27,56 +23,41 @@
     float: left;
 }
 
-#portals {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.portal {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    border-radius: 1rem;
-    background-color: aqua;
-    height:40vw;
-    margin:1rem;
-    transition: transform 0.2s ease-in-out;
-}
-
-.portal-icon {
-    aspect-ratio: 1 / 1;
-    align-self: start;
-    width:80%;
-    border-radius: 50%;
-    background-color: white;
-    margin:3rem;
-    align-content: center;
-    justify-content: center;
-    transition: transform 0.2s ease-in-out;
-}
-
-.portal:hover {
-    transform: scale(1.02);
-}
-
-.portal-icon:hover {
-    transform: scale(1.05);
-}
-
-.portal-head {
-    font-size: 4vw;
-    margin: 1rem
-}
-
 #code-icon-container {
     text-align: center;
     font-size: 10vw;
     font-family: "Courier Prime Bold";
     font-weight:900
+}
+
+.socials {
+    display: grid;
+    grid-auto-columns: 1fr; 
+    gap: 1vw;
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: 1fr;
+    justify-items: center;
+    width: 75%;
+
+    margin: 1vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.soc {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    aspect-ratio: 1/1;
+
+    background-color: #bfd3ee;
+    border-radius: 5vw;
+    align-items: center;
+}
+
+.soc img {
+    width: 60%;
+    margin: auto auto;
 }
 
 /* Used when the screen width is less than the given value (e.g. mobile devices) */
@@ -87,5 +68,9 @@
     #sticker {
         width: 50%;
         align-self: center;
+    }
+
+    .socials {
+        width: 100%;
     }
 }
