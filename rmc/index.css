@@ -1,0 +1,31 @@
+body {
+    background-image: url("../images/dirt.png");
+    background-size: 5vw;
+    background-repeat: repeat;
+}
+
+#map {
+    width: 100%;
+}
+
+.img-container {
+    width: 70%;
+    margin: auto auto;
+}
+
+#disclaimer {
+    display: none;
+    color: white;
+    
+}
+
+/* Used when the screen width is less than the given value (e.g. mobile devices) */
+@media screen and (max-width: 800px) {
+    .img-container {
+        width: 100%;
+    }
+
+    #disclaimer {
+        display: block;
+    }
+}
