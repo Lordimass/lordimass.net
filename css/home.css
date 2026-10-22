@@ -17,31 +17,23 @@
 #main-info {
     width: 65%;
     background-color:white;
-    padding: 1rem;
+    /*padding: 1rem;*/
     margin: 1rem;
     border-radius:1rem;
     float: left;
-}
 
-#code-icon-container {
-    text-align: center;
-    font-size: 10vw;
-    font-family: "Courier Prime Bold";
-    font-weight:900
+    p, h1 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 
 .socials {
-    display: grid;
-    grid-auto-columns: 1fr; 
-    gap: 1vw;
-    grid-template-columns: repeat(5, 1fr); 
-    grid-template-rows: 1fr;
+    display: flex;
+    gap: 1rem;
     justify-items: center;
     width: 50%;
-
-    margin: 1vw;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1rem auto;
 }
 
 .soc {
@@ -49,8 +41,6 @@
     text-align: center;
     width: 100%;
     aspect-ratio: 1/1;
-
-    background-color: #bfd3ee;
     border-radius: 20%;
     align-items: center;
 }
@@ -63,6 +53,35 @@
 
 .soc:hover img {
     width: 70%;
+}
+
+#hytale-mods-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.40) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.40) 1px, transparent 1px),
+        #df7fa7;
+    background-size: 25px 25px;
+    border: 3px solid var(--ink);
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+
+    h1 {
+        color: white;
+        text-shadow: 0 0 5px #000000;
+    }
+}
+
+#hytale-mods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 /* Used when the screen width is less than the given value (e.g. mobile devices) */

@@ -1,0 +1,54 @@
+.projectCard {
+  min-height: 330px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 22px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 6px 6px 0 rgba(29, 35, 48, 0.16);
+
+  h3 {
+    overflow-wrap: break-word;
+  }
+
+  img {
+    position: relative;
+    left: -22px;
+    top: -22px;
+    width: calc(100% + 44px);
+    max-width: none;
+    height: auto;
+    margin-bottom: -22px
+  }
+}
+
+.projectType {
+  margin: 0;
+  color: #496171;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tagRow span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f6f8fb;
+  color: #3b4656;
+  font-size: 0.84rem;
+}
+
+.projectCard a {
+  font-weight: 900;
+}

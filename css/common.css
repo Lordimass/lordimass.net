@@ -11,20 +11,36 @@
 
 @font-face {
     font-family: "Omnes Medium";
-    src: url("../fonts/Omnes\ Medium.ttf") format("opentype");
+    src: url("../fonts/Omnes Medium.ttf") format("opentype");
 }
 
 @font-face {
     font-family: "Omnes Black";
-    src: url("../fonts/Omnes\ Black.ttf") format("opentype");
+    src: url("../fonts/Omnes Black.ttf") format("opentype");
 }
+
+:root {
+    --ink: #1d2330
+}
+
 /****************  STYLE TAGS  ****************/
+h1, h2 {
+    font-family: "Omnes Black", sans-serif;
+    color: var(--ink);
+    margin: 0
+}
+
+h3 {
+    font-family: "Omnes Pro Bold", sans-serif;
+    font-size: 1.5rem;
+}
+
 h1 {
-    font-family: "Omnes Black";
+    font-size: 3rem;
 }
 
 p {
-    font-family: "Courier Prime";
+    font-family: "Courier Prime", sans-serif;
 }
 
 a[href] {
@@ -34,6 +50,18 @@ a[href] {
 
 a[href]:hover {
     font-weight: 700;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+hr {
+    width: 100%;
 }
 
 /****************  Classes  ****************/
@@ -49,9 +77,19 @@ a[href]:hover {
     justify-items: center;
 }
 
+.content-box {
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.40) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.40) 1px, transparent 1px),
+        #7fb7df;
+    background-size: 25px 25px;
+    border: 3px solid var(--ink);
+    border-radius: 1rem;
+}
+
 #footer-gifs {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  }
+}
